@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/form.css">
+    <script defer src="./css/form_1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    
+    
+</head>
+<body>
+    
+    <!--Navbar starts here-->
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./images/kerala-tourism-title.png" alt="" width="200" height="54">
+          </a>
+        </div>
+      </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./districts.html">Where to go</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Where to stay</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Things to do</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plan your trip</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sign.html">Sign up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./contact.html">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--Navbar ends here-->
+    
+    
+    <div class="container">
+        <form id="form" action="./login.html" method="get">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Name</label>
+                <input onkeyup="isValidname();" id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="phoneno">Phone Number</label>
+                <input onkeyup="isValidphoneno();" id="phoneno" name="phoneno" type="number">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input onkeyup="isValidEmail();" id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input oninput="isValidpassword();strengthChecker();" id="password"name="password" type="password">
+                <div class="error"></div>
+        
+                <span id="toggle" onclick="toggle()">
+                        <i class="fas fa-eye"></i>
+                </span>
+                    <div id="strength-bar"></div>
+            
+                <meter max="4" id="password-strength-meter"></meter>
+                <p id="password-strength-text"></p>
+                
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input onkeyup="isMatchpassword();" id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
