@@ -88,13 +88,12 @@
                 <label for="password">Password</label>
                 <input oninput="isValidpassword();strengthChecker();" id="password"name="password" type="password">
                 <div class="error"></div>
-        
+                <br>
                 <span id="toggle" onclick="toggle()">
                         <i class="fas fa-eye"></i>
                 </span>
                     <div id="strength-bar"></div>
-            
-                <meter max="4" id="password-strength-meter"></meter>
+                    <meter id="password-strength-meter"></meter>
                 <p id="password-strength-text"></p>
                 
             </div>

@@ -127,7 +127,7 @@ meter {
  
 
 .feedback {
-  color: #9ab;
+  color: rgb(218, 14, 150);
   font-size: 90%;
   padding: 0 .25em;
   font-family: Courgette, cursive;

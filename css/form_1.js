@@ -1,12 +1,6 @@
 
 const form = document.getElementById('form');
 
-
-
-
-
-
-
 //window.onload=function(){ 
 const strength = {
     0: "Worst ☹",
